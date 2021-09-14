@@ -4,7 +4,7 @@ abstract class Validator<T> {
 
 class NameValidator : Validator<String>() {
     override fun validate(value: String?): List<ErrorCode> {
-        val pattern = "[a-zA-zа-яА-я]+".toRegex()
+        val pattern = "[A-ZА-Я][a-zа-я]+".toRegex()
 
         if (value == null || !value.matches(pattern))
             return listOf(ErrorCode.INVALID_CHARACTER)
