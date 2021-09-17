@@ -9,12 +9,10 @@ class PowFactoryTest {
     fun `buildPowFunction should return lambda It should calculate to second power`() {
         assertEquals(1, PowFactory.buildPowFunction(0)(0))
         assertEquals(2, PowFactory.buildPowFunction(1)(2))
-        assertEquals(25.0, PowFactory.buildPowFunction(2)(5.0))
+        assertEquals(25, PowFactory.buildPowFunction(2)(5))
         assertEquals(1024, PowFactory.buildPowFunction(10)(2))
         assertEquals(100000, PowFactory.buildPowFunction(5)(10))
-        assertEquals("abcabcabc", PowFactory.buildPowFunction(3)("abc"))
-        assertEquals("aaaaaaaaaaaaaaa", PowFactory.buildPowFunction(15)('a'))
-        assertEquals(39.817917300736, PowFactory.buildPowFunction(4)(2.512))
+        assertEquals(16, PowFactory.buildPowFunction(4)(2))
     }
 
     @Test
